@@ -1,0 +1,16 @@
+\newpage
+
+\section{Test-cases}
+
+Support for tests was added in the following steps. A test container
+was added to docker. When that container runs, it performs all the tests
+using pytest~\cite{pytest}. Code coverage analysis is then reported using
+coverage.py~\cite{coverage}.
+
+Support for Selenium~\cite{selenium} was also added, in order to support
+end-to-end testing. Selenium relies on the browsers Firefox/Google Chrome, and
+so far attempts to make those run in docker have been unsuccessful. There are
+hopes, however, that such support will be able to be implemented before long.
+
+Thus, though no actual test cases have been written, the groundwork was laid
+for being able to perform automated tests.

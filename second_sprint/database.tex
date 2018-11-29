@@ -1,0 +1,39 @@
+\newpage
+
+\section{Database-Schema}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{new_db_schema.PNG}
+  \caption{\label{fig:schema} The database schema.}
+\end{figure}
+
+% \begin{figure}[H]
+%     \center
+%     \includegraphics[height=6cm, width=9cm]{new_db_schema.PNG}
+% \end{figure}
+
+\textbf{Users:} Keeps the users with an id, email and password. Also a
+setting for whether the user is an admin or not.
+
+\textbf{Orders:} Keeps orders with a foreign key idUsers to the id from table
+Users. Also keeps whether the order is paid, handled and what the price of
+the order was. The shopping basket is treated as an order as well.
+
+\textbf{OrderItems:} The items of an order with foreign keys idOrders and
+idProduct to the tables Orders and Product.  Keeps the amount, price and id
+of a product in an order.
+
+\textbf{Product:} Foreign keys idBerry and idGoods to the tables Berry
+and Goods.
+
+\textbf{Berry:} Foreign key idBerryType to table BerryType. Contains name
+of berry.
+
+\textbf{Goods:} Foreign key idGoodsType to table GoodsType. Contains name
+of goods.
+
+\textbf{BerryType:} Contains Berry category.
+
+\textbf{GoodsType:} Contains Goods category.
+
