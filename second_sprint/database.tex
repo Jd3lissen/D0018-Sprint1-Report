@@ -9,20 +9,19 @@
 \end{figure}
 
 \begin{itemize}
-  \item[\textbf{Users:}] Keeps the users with an id, email and password. Also a
-    setting for whether the user is an admin or not.
-  \item[\textbf{Orders:}] Keeps orders with a foreign key idUsers to the
-    id from table Users. Also keeps whether the order is paid, handled and
-    what the price of the order was. The shopping basket is treated as an
-    order as well.
+  \item[\textbf{Users:}] Contains the users, both admins and non-admins. The
+    email is used to identify user at login, so no username is needed.
+  \item[\textbf{Orders:}] Contains an order. This is used to represent
+    the shopping basket before an order was made (\mintinline{python}{payment
+    == false}) an order that has been paid but not yet processed and shipped
+    (\mintinline{python}{payment == True and status == False}), as well as
+    finished orders (\mintinline{python}{status == True}). Each order has
+    one user.
   \item[\textbf{OrderItems:}] The items of an order with foreign keys
     idOrders and idProduct to the tables Orders and Product.  Keeps the
     amount, price and id of a product in an order.
   \item[\textbf{Product:}] Foreign keys idBerry and idGoods to the tables
     Berry and Goods.
-  \item[\textbf{Berry:}] Foreign key idBerryType to table BerryType. Contains
+  \item[\textbf{ProductType:}] Foreign key idBerryType to table BerryType. Contains
     name of berry.
-  \item[\textbf{Goods:}] Foreign key idGoodsType to table GoodsType. Contains
-    name of goods.
-  \item[\textbf{BerryType:}] Contains Berry category.
 \end{itemize}
