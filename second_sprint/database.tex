@@ -13,7 +13,7 @@
     email is used to identify user at login, so no username is needed.
   \item[\textbf{Orders:}] Contains an order. This is used to represent
     the shopping basket before an order was made 
-    (\mintinline{python}{payment == false}) an order that has been paid but not 
+    (\mintinline{python}{payment == False}) an order that has been paid but not 
     yet processed and shipped 
     (\mintinline{python}{payment == True and status == False}), as well as
     finished orders (\mintinline{python}{status == True}). Each order has
