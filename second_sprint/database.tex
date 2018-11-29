@@ -9,20 +9,22 @@
 \end{figure}
 
 \begin{itemize}
-  \item[\textbf{Users:}] Contains the users, both admins and non-admins. The
-    email is used to identify user at login, so no username is needed.
-  \item[\textbf{Orders:}] Contains an order. This is used to represent
-    the shopping basket before an order was made 
-    (\mintinline{python}{payment == False}) an order that has been paid but not 
-    yet processed and shipped 
-    (\mintinline{python}{payment == True and status == False}), as well as
-    finished orders (\mintinline{python}{status == True}). Each order has
-    one user.
-  \item[\textbf{OrderItems:}] The items of an order with foreign keys
-    idOrders and idProduct to the tables Orders and Product.  Keeps the
-    amount, price and id of a product in an order.
-  \item[\textbf{Product:}] Foreign keys idBerry and idGoods to the tables
-    Berry and Goods.
-  \item[\textbf{ProductType:}] Foreign key idBerryType to table BerryType. Contains
-    name of berry.
+  \item[\textbf{Users:}] Contains the Users, both admins and non-admins. The
+    email is used to identify User at login, so no username is needed.
+  \item[\textbf{Orders:}] Used to represent the shopping basket before an
+    Order was made (\mintinline{python}{payment == False}) an Order that has
+    been paid but not yet processed and shipped 
+    (\mintinline{python}{payment == True and status == False}), 
+    as well as finished Orders (\mintinline{python}{status == True}). Each
+    Order has one User.
+  \item[\textbf{OrderItems:}] The mapping between Orders and Products
+    (Products were previously known as Items, that is why the name is still
+    OrderItems, may be subject to change in a later release). Keeps track
+    of how many of each product is included in the Order, as well as the
+    price of the Product at the time it was paid.
+  \item[\textbf{ProductType:}] The different possible types of a product. With
+    each ProductType there is an associated unit in which a given amount
+    of that ProductType is measured.
+  \item[\textbf{Product:}] The merchandise, including name, price, image and
+    ProductType.
 \end{itemize}
