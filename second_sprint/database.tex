@@ -12,8 +12,9 @@
   \item[\textbf{Users:}] Contains the users, both admins and non-admins. The
     email is used to identify user at login, so no username is needed.
   \item[\textbf{Orders:}] Contains an order. This is used to represent
-    the shopping basket before an order was made (\mintinline{python}{payment
-    == false}) an order that has been paid but not yet processed and shipped
+    the shopping basket before an order was made 
+    (\mintinline{python}{payment == false}) an order that has been paid but not 
+    yet processed and shipped 
     (\mintinline{python}{payment == True and status == False}), as well as
     finished orders (\mintinline{python}{status == True}). Each order has
     one user.
