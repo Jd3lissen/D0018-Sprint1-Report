@@ -1,0 +1,40 @@
+\subsection{Role Descriptions and Features}
+
+A common way to describe desirable features for a software project is to
+formulate them in the form of user stories. Such a user story usually follows
+the pattern shown in Figure~\ref{fig:user_story}.
+
+\begin{figure}[H]
+  \centering
+  \begin{minted}{text}
+    As a <Role>
+    I want <Feature>
+    So that I can have <Benefit>
+  \end{minted}
+  \caption{\label{fig:user_story} The standard pattern for a user story.}
+\end{figure}
+
+For the E-commerce website there are two kinds of users, customers and
+administrators. Below, a summary of the roles can be found. For complete user
+stories, please refer to Appendix~\ref{app:user_stories}.
+
+\subsubsection{Role: Visitor}\label{sec:visitor_role}
+
+A Visitor is any user that is not logged in. Such a visitor is able to list
+products, view product information find their current availability. They are
+also offered the option of registering an account on the site, thus becoming
+a Customer.
+
+\subsubsection{Role: Customer}\label{sec:user_role}
+
+A Customer is a registered user \textbf{without} admin privileges. In order to
+access Customer privileges it is required that the Customer is logged in.
+A Customer can do everything that a Visitor can do, as well as adding items
+to a shopping cart and making orders.
+
+\subsubsection{Role: Admin}\label{sec:admin_role}
+
+A Admin is a registered user \textbf{with} admin privileges. In order to access
+Admin privileges it is required that the Admin is logged in. An Admin can do
+everything that a Customer can do. An Admin can also add, update and remove
+Products and Product Types, as well as handling orders.
