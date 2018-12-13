@@ -10,9 +10,9 @@
 
 \begin{itemize}
   \item[\textbf{Users:}] Contains the Users, both admins and non-admins. The
-    email is used to identify User at login, so no username is needed.
+    email is used to identify the User at login, so no username is needed.
   \item[\textbf{Orders:}] Used to represent the shopping basket before an
-    Order was made (\mintinline{python}{payment == False}) an Order that has
+    Order was made (\mintinline{python}{payment == False}), an Order that has
     been paid but not yet processed and shipped (\mintinline{python}{payment
     == True and status == False}), as well as finished Orders
     (\mintinline{python}{status == True}). Each Order has one User.
@@ -23,7 +23,13 @@
     price of the Product at the time it was paid.
   \item[\textbf{ProductType:}] The different possible types of a product. With
     each ProductType there is an associated unit in which a given amount
-    of that ProductType is measured.
-  \item[\textbf{Product:}] The merchandise, including name, price, image and
-    ProductType.
+    of that ProductType is measured. These can be used when searching for
+    products.
+  \item[\textbf{Product:}] The merchandise, including name, availability,
+  price, image and ProductType. Price and availability are used for sorting.
+  \item[\textbf{Review:}] A review by a User on a Product, containing a rating
+    and an optional comment. Only one review per product is allowed, if the
+    same user tries to add another review, it overwrites the previous one. The
+    rating is used for sorting.
 \end{itemize}
+
