@@ -1,0 +1,48 @@
+\section{Introduction}\label{sec:introduction}
+
+The students were tasked with building a web application that was to be
+used for e-commerce. The focus was to be placed on the database and server
+layers, while constructing a usable website through which the user could
+purchase items.
+
+\subsection{Requirements}\label{sec:requirements}
+
+The system should be able to process orders. There should be the concept
+of a shopping cart to which a customer can add products, and then check out
+with payment. It was strongly recommended that the database be a relational
+one. The use of a ORM for creating schemas was disallowed, because the goal
+of the assignment was to learn to administer the database.
+
+\subsection{Choice of Merchandise}\label{sec:merchandize}
+
+Multiple different suggestions for merchandise were discussed, including
+computers and cars. Eventually it was decided, that because the merchandise
+itself was \emph{not} the main focus of the project, something less obvious
+might as well be chosen. It was decided to sell berries, and in order to
+make the variety of items sold a bit more diverse (for a more interesting
+project), it was also suggested that related supplies, such as filters and
+jars for jam production, would also be sold.
+
+\subsection{Technologies}\label{sec:technologies}
+
+The choice of technologies was very open, which warranted some research into
+different technologies. The choices were then made in favor of technologies
+that would offer the most learning.
+
+The choice for most of the stack fell on Django~\cite{django}, because,
+
+\begin{enumerate}
+  \item It is a widely used, tried and tested technology
+  \item Knowing Django could be an advantage in a future career
+  \item Other colleagues told us it would be difficult, due to the constraint
+    about ORMs (See Section~\ref{sec:requirements}).
+\end{enumerate}
+
+It was decided to make the application as production ready as possible,
+hosting it on a remote server inside docker~\cite{docker} containers. The
+Django server was run using gunicorn~\cite{gunicorn}, which was then
+mirrored using nginx~\cite{nginx} for added robustness.
+
+The choice for the database fell upon PostgreSQL~\cite{postgres} because it
+is a popular alternative to MySQL~\cite{MySQL} and has been gaining popularity
+for many years. It is therefore a good technology to be acquainted with.
