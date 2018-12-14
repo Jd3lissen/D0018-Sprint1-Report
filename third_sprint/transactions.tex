@@ -1,0 +1,19 @@
+\subsubsection{Transactions}\label{sec:transaction}
+
+In the implementation shown in the last demo, there was no atomicity
+constraints at the checkout of orders. This is something that would have to be
+fixed if the service were ever to be used live. It would be a imple matter of
+wrapping the transactions in the following \mintinline{python}{with}-statement
+(See Figure~\ref{fig:transaction}).
+
+\begin{figure}[H]
+\centering
+\begin{minted}{python}
+from django.db import transaction
+with transaction.atomic():
+  # Any code here will be considered one transaction.
+  pass
+\end{minted}
+\caption{\label{fig:transaction} How to wrap database interaction within
+Django in order to ensure atomic transactions.}
+\end{figure}
