@@ -1,0 +1,46 @@
+\begin{thebibliography}{1}
+
+\bibitem{coverage}
+Coverage.py.
+\newblock A tool for measuring code coverage of python programs.
+  \url{https://coverage.readthedocs.io}.
+
+\bibitem{django}
+Django.
+\newblock The web framework for perfectionists with deadlines.
+  \url{https://www.djangoproject.com/}.
+
+\bibitem{docker}
+Docker.
+\newblock Protect your legacy, invest in your future.
+  \url{https://www.docker.com/}.
+
+\bibitem{gunicorn}
+Gunicorn.
+\newblock Python wsgi http server for unix. \url{https://gunicorn.org/}.
+
+\bibitem{MySQL}
+MySQL.
+\newblock The world's most popular open source database.
+  \url{https://www.mysql.com/}.
+
+\bibitem{nginx}
+NGINX.
+\newblock High performance load balancer, web server and reverse proxy.
+  \url{https://www.nginx.com/}.
+
+\bibitem{postgres}
+PostgresSQL.
+\newblock The world's most advanced open source relational database.
+  \url{https://www.postgresql.org/}.
+
+\bibitem{pytest}
+Pytest.
+\newblock Helps you write better programs.
+  \url{https://docs.pytest.org/en/latest/}.
+
+\bibitem{selenium}
+Selenium.
+\newblock Browser automation. \url{https://www.seleniumhq.org/}.
+
+\end{thebibliography}
