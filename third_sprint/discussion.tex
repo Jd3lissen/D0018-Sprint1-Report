@@ -1,9 +1,9 @@
-\subsection{Considerations}
+\section{Discussion}\label{sec:discussion}
 
 Here are a couple of explanations as to why we've implemented some of the
 features the way we have.
 
-\subsubsection{Handling Orders}
+\subsection{Handling Orders}
 
 When a user pays for an order, he can no longer remove the order. The admin
 on the other hand can remove an order after it's been paid (assuming the
@@ -11,7 +11,7 @@ company sends money back to the customer). This can not be done after the
 order has been handled. He can also set the handled status of orders, both
 to handled and to not handled in case there is a problem or misunderstanding.
 
-\subsubsection{Availability}
+\subsection{Availability}
 
 Products can not be added to orders in higher quantity than their availability.
 Each time the user interacts with the order basket, the price and the
@@ -20,7 +20,7 @@ of a product is now lower than the amount of that same product in a users
 basket, the whole amount of that product is removed from the basket, to
 prevent confusion.
 
-\subsubsection{Filtering}
+\subsection{Filtering}
 
 Products can be filtered according to availability, rating,
 and price. This can be done \mintinline{text}{highest-lowest} and
