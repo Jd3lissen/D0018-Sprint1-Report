@@ -1,24 +1,27 @@
 \subsection{Future Work} 
 
-As seen in the Appendix~\ref{sec:backlog} there are several issues that
-we did not adhere to in the third (last) sprint. For future developement these
-should presumably be implemented for an enhaced user experience. To update
-the About page is not a too complicated endeavour but was still ignored since
-this project is more of a proof of concept than a fully deployed webshop,
-therefore ethics and information of this site was not added.
+\subsubsection{About Page}\label{sec:about}
 
-The three last issues \textit{Add HTTPS, Payments, and E-mail Reciept}, would
-be be critical for completing the last chapter of this webshop. Although these
+As seen in Appendix~\ref{sec:backlog} there are several issues that were
+not yet resolved. For future development these should be implemented for
+an enhanced user experience. To update the About page was ignored since
+this project is more of a proof of concept than a fully deployed web shop, but
+should be implemented before actually starting a business to build trust with
+users.
+
+\input{third_sprint/transactions.tex}
+
+\subsubsection{Proper Order Handling}\label{sec:security}
+
+The three last issues \textit{Add HTTPS, Payments, and E-mail Receipt}, would
+be be critical for completing the last chapter of this web shop. Although these
 implementations would require additional thought regarding managing tables
 and the DBMS, the technologies are rather outside of the scope of this course.
 
-Django does have implementation guides for including HTTPS to the Django-App,
-although there may be more to attend to througout this project to make it
-possible. Adding an automated email service is also somthing that could be
-implemented via the Django-framework.  Payment systems on the other hand
-would require a dive into a completely new technology-field. Given that this
-is not the objective of this course, the chances of this being implemented
-are slim but would nethertheless, would be interesting and fun functionality
-to implement.
-
-\input{third_sprint/transactions.tex}
+Django has implementation guides for including HTTPS to the Django-App,
+so that part should be rather easily implemented. Adding an automated email
+service is also something that could be implemented via the Django-framework.
+Payment systems on the other hand would require a dive into a completely
+new technology-field. Given that this is not the objective of this course,
+the chances of this being implemented are slim, it would nevertheless be
+interesting and fun to implement such functionality.
